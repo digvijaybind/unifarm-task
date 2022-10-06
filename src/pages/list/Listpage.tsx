@@ -39,19 +39,25 @@ const Listpage = (props: { ListDetails: any }) => {
                 <Grid item xs={7.2} md={7.5} lg={7.5} container direction="row">
                   <Grid
                     item
-                    xs={2.9}
+                    xs={3}
                     md={3}
                     lg={3}
                     className={classes.listDetails}
                   >
                     <div className={classes.listHeading}>
-                      Cohort 29 {data.fireIcon && <img src={FireIcon} />}
+                      Cohort{" "}
+                      {data.fireIcon && (
+                        <>
+                          29{" "}
+                          <img src={FireIcon} className={classes.fireImage} />
+                        </>
+                      )}
                     </div>
                     <div className={classes.percentage}>{data.cohort29}</div>
                   </Grid>
                   <Grid
                     item
-                    xs={2.9}
+                    xs={3.1}
                     md={3}
                     lg={3}
                     className={classes.listDetails}
@@ -77,14 +83,16 @@ const Listpage = (props: { ListDetails: any }) => {
                   </Grid>
                   <Grid
                     item
-                    xs={3.6}
+                    xs={3.7}
                     md={3}
                     lg={3}
                     className={classes.listDetails}
                   >
                     <div className={classes.listHeading}>Rewards</div>
                     {data?.rewards !== undefined && (
-                      <div className={classes.rewardIcons}>
+                      <div
+                        className={`${classes.rewardIcons} ${classes.rewardHeight}`}
+                      >
                         {data?.rewards.map((item: any, index: any) => (
                           <>
                             {index < 3 && (
@@ -111,7 +119,7 @@ const Listpage = (props: { ListDetails: any }) => {
                   </Grid>
                   <Grid
                     item
-                    xs={2.5}
+                    xs={2.1}
                     md={3}
                     lg={3}
                     className={classes.listDetails}

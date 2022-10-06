@@ -30,8 +30,10 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     fontFamily: "InterRegular !important" as any,
+    color: `${Theme.black}`,
     [theme.breakpoints.down("xs")]: {
       fontFamily: "InterRegular !important" as any,
+      color: `${Theme.black}`,
     },
   },
   normalText: {
@@ -52,6 +54,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       fontFamily: "InterRegular !important" as any,
+      color: `${Theme.black}`,
     },
   },
   topfarmManagne: {
@@ -95,6 +98,11 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {},
+  },
+  rewardHeight: {
+    [theme.breakpoints.down("xs")]: {
+      height: "15px",
+    },
   },
   mainIcon: {
     [theme.breakpoints.down("xs")]: {
@@ -203,7 +211,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
-  
   firstImage: {
     position: "relative",
     left: "20px",
@@ -236,7 +243,6 @@ export const useStyles = makeStyles((theme) => ({
   secondIcon: {
     position: "relative",
     right: "10px",
-    [theme.breakpoints.down("xs")]: {},
   },
   imgHeader: {
     display: "flex",
@@ -302,5 +308,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   selectNetwork: {
     position: "relative",
+  },
+  fireImage: {
+    [theme.breakpoints.down("xs")]: {
+      width: "8px",
+    },
   },
 }));

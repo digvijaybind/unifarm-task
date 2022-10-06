@@ -79,7 +79,7 @@ export default function Landing(props: Props) {
           <div className={classes.appHeader}>
             <div className={classes.btnContent}>
               <Button
-                colors={"primary"}
+                colors={"`Theme.black`"}
                 btnName={"13.4622"}
                 variants={"contained"}
                 border={"gray"}
@@ -87,7 +87,7 @@ export default function Landing(props: Props) {
                 leftIcon
               />
               <Button
-                colors={"primary"}
+                colors={"black"}
                 btnName={"0xF1.....sc2"}
                 variants={"contained"}
                 border={"gray"}

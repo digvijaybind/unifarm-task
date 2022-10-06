@@ -11,7 +11,6 @@ export const useStyles: any = makeStyles((theme) => ({
     fontWeight: 500,
     lineHeight: "19px",
     padding: "10px",
-
     margin: theme.spacing(1),
     borderWidth: "1px",
     [theme.breakpoints.down("sm")]: {
@@ -34,7 +33,7 @@ export const useStyles: any = makeStyles((theme) => ({
   },
   grayBorder: {
     borderColor: `${Theme.borderGray}`,
-    color: `${Theme.borderGray}`,
+    color: `${Theme.black}`,
   },
   buttonLeftIcon: {
     marginRight: "15px",
