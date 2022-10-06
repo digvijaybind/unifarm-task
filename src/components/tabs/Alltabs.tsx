@@ -7,7 +7,7 @@ const Alltabs = (props: { tabChange?: any }) => {
   const [value, setValue] = useState(0);
   const classes = useStyles();
   const handleChange = (_event: React.ChangeEvent<{}>, newValue: number) => {
-    console.log(newValue);
+   
     localStorage.setItem("path", newValue.toString());
     props.tabChange(newValue);
     setValue(newValue);

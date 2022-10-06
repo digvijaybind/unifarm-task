@@ -202,14 +202,8 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "9px",
     },
   },
-  // imageCounts: {
-  //   color: `${Theme.gray}`,
-  //   fontWeight: 400,
-  //   height: "36px",
-  //   fontSize: "14px",
-  //   lineHeight: "24px",
-  //   paddingLeft: "10px",
-  // },
+
+  
   firstImage: {
     position: "relative",
     left: "20px",

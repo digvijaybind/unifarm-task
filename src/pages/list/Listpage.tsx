@@ -30,25 +30,13 @@ const Listpage = (props: { ListDetails: any }) => {
     <div>
       <div className={classes.listBorder}>
         {AllDetails?.map((data) => {
-          {
-            console.log(data?.rewards, "data?.Rewards");
-          }
           return (
             <div className={classes.listCard}>
               <Grid xs={12} container direction="row" alignItems={"center"}>
                 <Grid item xs={1} md={1} lg={1}>
                   <img src={data.mainIcon} className={classes.mainIcon} />
-                  {/* <Iconbackground icon={Fire} color={"#E5E5E5"} /> */}
                 </Grid>
-                <Grid
-                  item
-                  xs={7.2}
-                  md={7.5}
-                  lg={7.5}
-                  container
-                  direction="row"
-                  // spacing={1}
-                >
+                <Grid item xs={7.2} md={7.5} lg={7.5} container direction="row">
                   <Grid
                     item
                     xs={2.9}
@@ -95,7 +83,7 @@ const Listpage = (props: { ListDetails: any }) => {
                     className={classes.listDetails}
                   >
                     <div className={classes.listHeading}>Rewards</div>
-                    {data?.Rewards !== undefined && (
+                    {data?.rewards !== undefined && (
                       <div className={classes.rewardIcons}>
                         {data?.rewards.map((item: any, index: any) => (
                           <>

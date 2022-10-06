@@ -12,9 +12,6 @@ import { menu } from "./MenuJson";
 import { hasChildren } from "./utils";
 
 export default function MenuList(props: { tabNumber: number }) {
-  useEffect(() => {
-    console.log(props.tabNumber, "tabNumber");
-  }, [props.tabNumber]);
   return (
     <>
       {menu.map((item, key) => (
@@ -35,7 +32,9 @@ const SingleLevel = (props: { item: any; tabNumber: any }) => {
     <>
       <ListItem
         button
-        className={`${props.item.key === props.tabNumber && classes.seletedLink}`}
+        className={`${
+          props.item.key === props.tabNumber && classes.seletedLink
+        }`}
       >
         <img src={props.item.icon} className={classes.iconView} />
         <ListItemText primary={props.item.title} />
@@ -55,7 +54,13 @@ const MultiLevel = (props: { item: any; tabNumber: any }) => {
 
   return (
     <React.Fragment>
-      <ListItem button onClick={handleClick}>
+      <ListItem
+        button
+        onClick={handleClick}
+        className={`${
+          props.item.key.includes(props.tabNumber) && classes.seletedLink
+        }`}
+      >
         <img src={props.item.icon} className={classes.iconView} />
         <ListItemText primary={props.item.title} />
         {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}

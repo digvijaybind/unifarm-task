@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CircularProgress from "@mui/material/CircularProgress";
 import Button from "../../components/button/CommonButton";
 import { useStyles } from "../SampleStyle";
-import Card from "@mui/material/Card";
-import LINKicon from "../../assets/icons/LINKicon.svg";
 
 const GridPage = (props: { GridDetails: any }) => {
   const classes = useStyles();
@@ -19,7 +16,6 @@ const GridPage = (props: { GridDetails: any }) => {
     setStakeBtn([...stakeBtn, data]);
   };
 
-  console.log(stakeBtn, "stakeBtn");
   const getType = (data: any) => {
     if (data > 50) return "success";
     else if (data > 20) return "error";
@@ -27,20 +23,10 @@ const GridPage = (props: { GridDetails: any }) => {
 
   return (
     <div>
-      {/* <Card> */}
       <Grid xs={12} container direction="row" alignItems={"center"}>
         {AllDetails.map((data: any, id: any) => {
           return (
-            // <div className={classes.listCard}>
-            <Grid
-              xs={12}
-              md={6}
-              lg={4}
-              container
-              direction="column"
-              // alignItems={"center"}
-              // justifyItems={"flex-start"}
-            >
+            <Grid xs={12} md={6} lg={4} container direction="column">
               <div className={classes.card}>
                 <div className={classes.imgHeader}>
                   <img src={data.mainIcon} alt="" />
@@ -114,11 +100,9 @@ const GridPage = (props: { GridDetails: any }) => {
                 </div>
               </div>
             </Grid>
-            // </div>
           );
         })}
       </Grid>
-      {/* </Card> */}
     </div>
   );
 };

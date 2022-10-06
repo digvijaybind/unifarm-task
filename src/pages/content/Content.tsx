@@ -41,7 +41,7 @@ const Content = (props: { tabValue: any }) => {
   const filterList = useCallback(
     (data: any, SearchData: any) => {
       setView(data);
-      console.log(SearchData.sort, "ttttt");
+     
       if (SearchData.sort === "asc") {
         const strAscending = ListDetails.sort((a, b) =>
           a.cohort29 > b.cohort29 ? 1 : -1
@@ -53,7 +53,7 @@ const Content = (props: { tabValue: any }) => {
         const strDescending = ListDetails.sort((a, b) =>
           a.cohort29 > b.cohort29 ? -1 : 1
         );
-        console.log(strDescending, "strDescending");
+      
         setArray(strDescending);
       }
 

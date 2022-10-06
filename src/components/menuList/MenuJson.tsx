@@ -10,6 +10,7 @@ export const menu = [
     icon: Home,
     title: "Dashboard",
     items: [],
+    key: [],
   },
   {
     icon: Bridge,
@@ -26,6 +27,7 @@ export const menu = [
         key: 1,
       },
     ],
+    key: [0, 1],
   },
   {
     icon: Trade,
@@ -40,6 +42,7 @@ export const menu = [
         items: [],
       },
     ],
+    key: [],
   },
   {
     icon: Bridge,

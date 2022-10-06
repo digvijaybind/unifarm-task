@@ -33,7 +33,7 @@ const Searchandselect = (props: SearchProps) => {
       [key]: data,
     }));
   };
-  console.log(SearchData, "searcj");
+ 
   return (
     <div className={classes.searchContent}>
       <div className={classes.searchInputs}>
