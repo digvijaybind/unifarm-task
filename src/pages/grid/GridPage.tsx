@@ -46,7 +46,7 @@ const GridPage = (props: { GridDetails: any }) => {
                   <img src={data.mainIcon} alt="" />
                   <div className={classes.headermangne}>
                     <div className={classes.listHeadings}>Cohort 29</div>
-                    <div className={classes.percentages}>{data.cohort}</div>
+                    <div className={classes.percentages}>{data.cohort29}</div>
                   </div>
                 </div>
                 <div className={classes.subHeaders}>
@@ -54,15 +54,15 @@ const GridPage = (props: { GridDetails: any }) => {
                   <div className={classes.progressCircle}>
                     <CircularProgress
                       variant="determinate"
-                      value={data.PoolFilled}
+                      value={data.poolFilled}
                       size={30}
                       thickness={6}
-                      color={getType(data.PoolFilled)}
+                      color={getType(data.poolFilled)}
                     />
                     <div
                       className={`${classes.percentages} ${classes.paddingVals}`}
                     >
-                      {data.PoolFilled + " %"}
+                      {data.poolFilled + " %"}
                     </div>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const GridPage = (props: { GridDetails: any }) => {
                 </div>
                 <div className={classes.subHeaders}>
                   <div className={classes.listHeadings}>APY</div>
-                  <div className={classes.percentages}>{data.APY}</div>
+                  <div className={classes.percentages}>{data.apy}</div>
                 </div>
                 <div className={classes.footerBtn}>
                   {data?.button.length > 0 &&

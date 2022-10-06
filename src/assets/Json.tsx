@@ -20,16 +20,16 @@ import Calculator from "../assets/icons/reward/calculator.svg";
 const ListData = [
   {
     mainIcon: FTXicon,
-    Cohort29: "FTX",
-    PoolFilled: 78.24,
-    Rewards: [
+    cohort29: "FTX",
+    poolFilled: 78.24,
+    rewards: [
       { icon: Reward11 },
       { icon: Reward12 },
       { icon: Reward13 },
       { icon: Reward31 },
       { icon: Reward32 },
     ],
-    APY: "98%",
+    apy: "98%",
     fireIcon: true,
     button: {
       icon: rocket,
@@ -40,10 +40,10 @@ const ListData = [
 
   {
     mainIcon: LINKicon,
-    Cohort29: "LINK",
-    PoolFilled: 24.9,
-    Rewards: [{ icon: Reward21 }, { icon: Reward22 }, { icon: Reward23 }],
-    APY: "22.97%",
+    cohort29: "LINK",
+    poolFilled: 24.9,
+    rewards: [{ icon: Reward21 }, { icon: Reward22 }, { icon: Reward23 }],
+    apy: "22.97%",
     button: {
       icon: rocket,
       title: "Boosted",
@@ -52,9 +52,9 @@ const ListData = [
   },
   {
     mainIcon: DAIicon,
-    Cohort29: "DAI",
-    PoolFilled: 49.3,
-    Rewards: [
+    cohort29: "DAI",
+    poolFilled: 49.3,
+    rewards: [
       { icon: Reward31 },
       { icon: Reward32 },
       { icon: Reward33 },
@@ -62,7 +62,7 @@ const ListData = [
       { icon: Reward32 },
       { icon: Reward33 },
     ],
-    APY: "39.28%",
+    apy: "39.28%",
     fireIcon: true,
     button: {
       icon: Calculator,
@@ -72,10 +72,10 @@ const ListData = [
   },
   {
     mainIcon: Uni,
-    Cohort29: "Uni",
-    PoolFilled: 10.86,
-    Rewards: [{ icon: Reward41 }, { icon: Reward42 }, { icon: Reward43 }],
-    APY: "96.41%",
+    cohort29: "Uni",
+    poolFilled: 10.86,
+    rewards: [{ icon: Reward41 }, { icon: Reward42 }, { icon: Reward43 }],
+    apy: "96.41%",
     button: {
       icon: rocket,
       title: "Boosted",
@@ -84,10 +84,10 @@ const ListData = [
   },
   {
     mainIcon: DOTicon,
-    Cohort29: "Dot",
-    PoolFilled: 10.86,
-    Rewards: [{ icon: Reward41 }, { icon: Reward42 }, { icon: Reward43 }],
-    APY: "96.41%",
+    cohort29: "Dot",
+    poolFilled: 10.86,
+    rewards: [{ icon: Reward41 }, { icon: Reward42 }, { icon: Reward43 }],
+     apy: "96.41%",
     button: {
       icon: Calculator,
       title: "Calculate APY",

@@ -31,7 +31,7 @@ const Listpage = (props: { ListDetails: any }) => {
       <div className={classes.listBorder}>
         {AllDetails?.map((data) => {
           {
-            console.log(data?.Rewards, "data?.Rewards");
+            console.log(data?.rewards, "data?.Rewards");
           }
           return (
             <div className={classes.listCard}>
@@ -59,7 +59,7 @@ const Listpage = (props: { ListDetails: any }) => {
                     <div className={classes.listHeading}>
                       Cohort 29 {data.fireIcon && <img src={FireIcon} />}
                     </div>
-                    <div className={classes.percentage}>{data.Cohort29}</div>
+                    <div className={classes.percentage}>{data.cohort29}</div>
                   </Grid>
                   <Grid
                     item
@@ -72,18 +72,18 @@ const Listpage = (props: { ListDetails: any }) => {
                     <div className={classes.progressCircle}>
                       <CircularProgress
                         variant="determinate"
-                        value={Number(data.PoolFilled)}
+                        value={Number(data.poolFilled)}
                         // size={30}
                         className={classes.circleprogres}
                         thickness={6}
                         color={
-                          Number(data.PoolFilled) > 50 ? "success" : "error"
+                          Number(data.poolFilled) > 50 ? "success" : "error"
                         }
                       />
                       <div
                         className={`${classes.percentage} ${classes.paddingVal}`}
                       >
-                        {data.PoolFilled + " %"}
+                        {data.poolFilled + " %"}
                       </div>
                     </div>
                   </Grid>
@@ -97,7 +97,7 @@ const Listpage = (props: { ListDetails: any }) => {
                     <div className={classes.listHeading}>Rewards</div>
                     {data?.Rewards !== undefined && (
                       <div className={classes.rewardIcons}>
-                        {data?.Rewards.map((item: any, index: any) => (
+                        {data?.rewards.map((item: any, index: any) => (
                           <>
                             {index < 3 && (
                               <img
@@ -113,9 +113,9 @@ const Listpage = (props: { ListDetails: any }) => {
                             )}
                           </>
                         ))}
-                        {data?.Rewards.length > 3 && (
+                        {data?.rewards.length > 3 && (
                           <div className={classes.imageCount}>
-                            +{data?.Rewards.length - 4}
+                            +{data?.rewards.length - 4}
                           </div>
                         )}
                       </div>
@@ -129,7 +129,7 @@ const Listpage = (props: { ListDetails: any }) => {
                     className={classes.listDetails}
                   >
                     <div className={classes.listHeading}>APY</div>
-                    <div className={classes.percentage}>{data.APY}</div>
+                    <div className={classes.percentage}>{data.apy}</div>
                   </Grid>
                 </Grid>
                 <Grid

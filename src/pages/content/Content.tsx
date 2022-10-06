@@ -21,6 +21,7 @@ const Content = (props: { tabValue: any }) => {
   const [View, setView] = useState(false);
   const [tabPage, setTabPage] = useState<number>(0);
   const [ListDetails, setListDetails] = useState<any[]>([]);
+  const [Array, setArray] = useState<any[]>([]);
 
   const handleTab = (data: any) => {
     setTabPage(data);
@@ -30,54 +31,56 @@ const Content = (props: { tabValue: any }) => {
   useEffect(() => {
     if (View) {
       setListDetails(GridData);
+      setArray(GridData);
     } else {
       setListDetails(ListData);
+      setArray(ListData);
     }
   }, [View]);
-
-  console.log(ListDetails, "details");
 
   const filterList = useCallback(
     (data: any, SearchData: any) => {
       setView(data);
+      console.log(SearchData.sort, "ttttt");
       if (SearchData.sort === "asc") {
-        const strAscending = [...ListDetails].sort((a, b) =>
-          a.Cohort29 > b.Cohort29 ? 1 : -1
+        const strAscending = ListDetails.sort((a, b) =>
+          a.cohort29 > b.cohort29 ? 1 : -1
         );
-        setListDetails(strAscending);
+        setArray(strAscending);
       }
 
       if (SearchData.sort === "desc") {
-        const strDescending = [...ListDetails].sort((a, b) =>
-          a.Cohort29 > b.Cohort29 ||
-          a.APY > b.APY ||
-          a.PoolFilled > b.PoolFilled
-            ? -1
-            : 1
+        const strDescending = ListDetails.sort((a, b) =>
+          a.cohort29 > b.cohort29 ? -1 : 1
         );
-        setListDetails(strDescending);
+        console.log(strDescending, "strDescending");
+        setArray(strDescending);
       }
 
       const list = ListDetails.filter((data) => {
-        if (SearchData.search === "") return data;
-        else if (
-          (data.APY !== null &&
-            data.APY.toString()
+        if (SearchData.search === "") {
+          return data;
+        } else if (
+          (data.apy !== null &&
+            data.apy
+              .toString()
               .toLowerCase()
               .includes(SearchData.search.toLowerCase())) ||
-          (data.Cohort29 != null &&
-            data.Cohort29.toString()
+          (data.cohort29 != null &&
+            data.cohort29
+              .toString()
               .toLowerCase()
               .includes(SearchData.search.toLowerCase())) ||
-          (data.PoolFilled != null &&
-            data.PoolFilled.toString()
+          (data.poolFilled != null &&
+            data.poolFilled
+              .toString()
               .toLowerCase()
               .includes(SearchData.search.toLowerCase()))
         ) {
           return data;
         }
       });
-      setListDetails(list);
+      setArray(list);
     },
     [ListDetails]
   );
@@ -109,9 +112,9 @@ const Content = (props: { tabValue: any }) => {
       {tabPage === 0 ? (
         <>
           {View ? (
-            <GridPage GridDetails={ListDetails} />
+            <GridPage GridDetails={Array} />
           ) : (
-            <Listpage ListDetails={ListDetails} />
+            <Listpage ListDetails={Array} />
           )}
         </>
       ) : (

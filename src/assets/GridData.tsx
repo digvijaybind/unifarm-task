@@ -27,10 +27,10 @@ import Calculator from "../assets/icons/reward/calculator.svg";
 const GridData = [
   {
     mainIcon: Tether,
-    cohort: "USDT",
-    PoolFilled: 93.86,
+    cohort29: "USDT",
+    poolFilled: 93.86,
     rewards: [{ icon: Reward11 }, { icon: Reward12 }, { icon: Reward13 }],
-    APY: "94.08%",
+    apy: "94.08%",
     button: [
       {
         icon: rocket,
@@ -46,8 +46,8 @@ const GridData = [
 
   {
     mainIcon: FTXicon,
-    cohort: "FTX",
-    PoolFilled: 78.57,
+    cohort29: "FTX",
+    poolFilled: 78.57,
     rewards: [
       { icon: Reward21 },
       { icon: Reward22 },
@@ -57,7 +57,7 @@ const GridData = [
 
       { icon: Reward21 },
     ],
-    APY: "93.86%",
+    apy: "93.86%",
     button: [
       {
         icon: rocket,
@@ -73,10 +73,10 @@ const GridData = [
   },
   {
     mainIcon: LINKicon,
-    cohort: "LINK",
-    PoolFilled: 24.9,
+    cohort29: "LINK",
+    poolFilled: 24.9,
     rewards: [{ icon: Reward31 }, { icon: Reward32 }, { icon: Reward33 }],
-    APY: "22.97%%",
+    apy: "22.97%%",
     button: [
       {
         icon: Calculator,
@@ -91,10 +91,10 @@ const GridData = [
   },
   {
     mainIcon: Uni,
-    cohort: "Uni",
-    PoolFilled: 93.86,
+    cohort29: "Uni",
+    poolFilled: 93.86,
     rewards: [{ icon: Reward41 }, { icon: Reward42 }, { icon: Reward43 }],
-    APY: "94.08%",
+    apy: "94.08%",
     button: [
       {
         icon: Calculator,
@@ -109,10 +109,10 @@ const GridData = [
   },
   {
     mainIcon: FTXicon,
-    cohort: "FTX",
-    PoolFilled: 78.57,
+    cohort29: "FTX",
+    poolFilled: 78.57,
     rewards: [{ icon: Reward51 }, { icon: Reward52 }, { icon: Reward53 }],
-    APY: "93.86%",
+    apy: "93.86%",
     button: [
       {
         icon: rocket,
@@ -128,10 +128,10 @@ const GridData = [
   },
   {
     mainIcon: LINKicon,
-    cohort: "LINK",
-    PoolFilled: 24.9,
+    cohort29: "LINK",
+    poolFilled: 24.9,
     rewards: [{ icon: Reward61 }, { icon: Reward62 }, { icon: Reward63 }],
-    APY: "22.97%%",
+    apy: "22.97%%",
     button: [
       {
         icon: rocket,
