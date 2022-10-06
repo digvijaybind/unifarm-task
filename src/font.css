@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "InterRegular";
+  src: url("./assets/fonts/Inter/static/InterRegular.ttf") format("ttf");
+
+  /* Safari, Android, iOS */
+}
+
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url("./assets/fonts//Roboto/RobotoRegular.ttf") format("ttf");
+
+  /* font-weight: bold; */
+}
